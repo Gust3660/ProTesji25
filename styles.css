@@ -1,0 +1,117 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6e6; /* Fondo rojo claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    border: 3px solid #cc0000; /* Borde rojo */
+  }
+  
+  /* Títulos */
+  h1 {
+    font-size: 2em;
+    color: #cc0000; /* Rojo fuerte */
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #cc0000;
+    margin-bottom: 10px;
+  }
+  
+  /* Formulario */
+  .task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #taskInput, #taskDate {
+    padding: 10px;
+    border: 1px solid #cc0000; /* Borde rojo */
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #fff5f5; /* Fondo ligeramente rosado */
+    color: #cc0000;
+  }
+  
+  #addTaskButton {
+    padding: 10px;
+    border: none;
+    border-radius: 50px; /* Botón ovalado */
+    background-color: #cc0000; /* Rojo fuerte */
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  #addTaskButton:hover {
+    background-color: #a30000; /* Tonalidad más oscura al pasar el cursor */
+  }
+  
+  /* Lista de tareas */
+  #taskList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Estilo de los elementos de la lista */
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #fff5f5; /* Fondo ligeramente rosado */
+    border-left: 6px solid; /* Indicador lateral */
+    font-size: 1em;
+  }
+  
+  /* Colores según la proximidad */
+  .task-item.red {
+    border-color: #ff0000; /* Rojo vivo */
+  }
+  
+  .task-item.orange {
+    border-color: #ffa500; /* Naranja */
+  }
+  
+  .task-item.green {
+    border-color: #008000; /* Verde */
+  }
+  
+  /* Botón de eliminar */
+  .task-item button {
+    background-color: #cc0000; /* Rojo fuerte */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Ovalado */
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s;
+  }
+  
+  .task-item button:hover {
+    background-color: #a30000; /* Tonalidad más oscura */
+  }
+  

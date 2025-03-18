@@ -3,22 +3,24 @@ document.addEventListener("DOMContentLoaded", loadTasks);
 document.getElementById("addTaskButton").addEventListener("click", function () {
   const taskInput = document.getElementById("taskInput");
   const taskDate = document.getElementById("taskDate");
+  const taskTime = document.getElementById("taskTime");
   const taskList = document.getElementById("taskList");
   const taskSectionTitle = document.getElementById("taskSectionTitle");
 
-  if (taskInput.value.trim() !== "" && taskDate.value) {
+  if (taskInput.value.trim() !== "" && taskDate.value && taskTime.value) {
     const task = {
       text: taskInput.value,
       date: taskDate.value,
+      time: taskTime.value,
     };
 
     saveTask(task);
     renderTask(task);
     taskInput.value = "";
     taskDate.value = "";
+    taskTime.value = "";
 
-    // Mostrar el título cuando haya tareas
-    taskSectionTitle.style.display = "block";
+    taskSectionTitle.style.display = "block"; // Mostrar título
   } else {
     alert("Por favor, completa todos los campos.");
   }
@@ -60,7 +62,7 @@ function renderTask(task) {
   }
 
   const taskText = document.createElement("span");
-  taskText.textContent = `${task.text} - Fecha límite: ${task.date}`;
+  taskText.textContent = `${task.text} - Fecha límite: ${task.date} Hora: ${task.time}`;
 
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Eliminar";
